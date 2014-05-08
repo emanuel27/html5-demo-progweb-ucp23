@@ -1,108 +1,49 @@
 <html> 
-<head> 
-
-<title>html5</title> 
-
-<script> //declaracion de variables globales 
-var num1=0,num2=0; 
-var mostrado=""; 
-comprobador=0; 
-operador=0; 
-//funcion para borrar 
-function nada(){ 
-num1=0; 
-num2=0; 
-mostrado=""; 
-comprobador=0; 
-operador=0; 
-document.formi.ver.value=0; 
-
-} 
-//funcion de los operadores 
-function operacion(a){ 
-	switch (a){ 
-		case 1: 
-			operador=1 
-			document.formi.ver.value="+"; 
-			break; 
-		case 2: 
-			operador=2 
-			document.formi.ver.value="-"; 
-			break; 
-		case 3: 
-			operador=3 
-			document.formi.ver.value="*"; 
-			break; 
-		case 4: 
-			operador=4 
-			document.formi.ver.value="div"; 
-			break; 
-		default: 
-		break; 
-	} 
-mostrado=""; 
-comprobador=1; 
-
-} 
-//funcion para que los botones se muestren en el input text 
-function mostrar(a){ 
-
-mostrado=mostrado+a; 
-document.formi.ver.value=mostrado; 
-
-if(comprobador==0){ 
-num1=parseFloat(mostrado); 
-}else if(comprobador==1){ 
-num2=parseFloat(mostrado); 
-} 
-
-
-} 
-//funcion que hace el resultado 
-function resultado(){ 
-switch (operador){ 
-case 1: 
-document.formi.ver.value=num1+num2; 
-break; 
-case 2: 
-document.formi.ver.value=num1-num2; 
-break; 
-case 3: 
-document.formi.ver.value=num1*num2; 
-break; 
-case 4: 
-document.formi.ver.value=num1/num2; 
-break; 
-default: 
-break;	
-
-
-} 
-num1=parseFloat(document.formi.ver.value); 
-mostrado=""; 
-
-} 
-</script> 
-</head> 
-<body bgcolor=#00CC66>
-	<div align="center"> 
-		<table border="2"><tr ><td> 
-		<table><form name="formi" action="" method=""> 
-			<th colspan="4" ><input type="text" value=0 style="text-align:right" readonly="readonly" name="ver"/> </th>
-			<tr><b> 
-			<td width="45<b><b> 
-			<input type="button" name="c" value="C" class="imagenbotom" style="text-align:center" onclick="nada()" /> 
-			</b></b></td> 
-</b><td width="35><input type="button" name="dividir" value="/" class="imagenbotom" style="text-align:center" onclick="operacion(4)" /></td><td width="35><input type="button" name="multiplicar" value="*" class="imagenbotom" style="text-align:center" onclick="operacion(3)"/></td><td width="35><input type="button" name="menos" value="-" class="imagenbotom" style="text-align:center" onclick="operacion(2)"/></td></tr> 
-<tr><td><input type="button" name="siete" value=7 class="imagenbotom" style="text-align:center" onclick="mostrar(7)"/></td><td><input type="button" onclick="mostrar(8)"name="ocho" value="8" class="imagenbotom" style="text-align:center"/></td><td><input type="button" name="nueve" value="9" onclick="mostrar(9)" class="imagenbotom" style="text-align:center"/></td> 
-<td rowspan="2"><input type="button" size="30me="mas" value="+" class="imagenespecial" style="text-align:center" onclick="operacion(1)"/></td> 
-</tr> 
-<tr><td><input type="button" name="cuatro" value="4" onclick="mostrar(4)" class="imagenbotom" style="text-align:center"/></td><td><input type="button" name="cinco" onclick="mostrar(5)" value="5" class="imagenbotom" style="text-align:center"/></td><td><input type="button" name="seis" onclick="mostrar(6)" value="6" class="imagenbotom" style="text-align:center"/></td></tr> 
-<tr><td><input type="button" name="uno" value="1" onclick="mostrar(1)" class="imagenbotom" style="text-align:center"/></td><td><input type="button"name="dos" onclick="mostrar(2)" value="2" class="imagenbotom" style="text-align:center"/></td><td><input type="button" name="tres" value="3" onclick="mostrar(3)" class="imagenbotom" style="text-align:center"/></td><td rowspan="2"><input type="button" name="igual" value="=" class="imagenespecial" style="text-align:center" onclick="resultado()"/></td></tr> 
-<tr><td colspan="2"><input type="button" name="cero" value="0" class="especialimagen" style="text-align:center" onclick="mostrar(0)"/></td><td><input type="button"name="punto" value="." class="imagenbotom" style="text-align:center" onclick="mostrar(.)"/></td></tr> 
-</form> 
-</table></td></tr></table> 
-</div> 
-<marquee behavior="alternate"><font size="95">CALCULADORA CASIO EMA</font></marquee>
-</body> 
-</html> 
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <input list="listacolores">
+            <datalist id="listacolores">
+            <option value="Azul">
+            <option value="Rojo">
+            <option value="Amarillo">
+            <option value="Negro">
+            <option value="Blanco">
+            </datalist>
+            
+            <form method="POST" oninput="resultado.value=parseInt(valor1.value)+parseInt(valor2.value)">
+                <input type="number" id="valor1" value="0"> +
+                <input type="number" id="valor2" value="0"> =
+                <output name="resultado" for="valor1 valor2"></output>
+            </form>
+            <br>
+            <label>buscar<input type="search" name="busqueda"></label>
+            <br>
+            <label>Introduzca email<input type="email" ></label>
+            <br>
+            <label>Introduzca una url<input type="url" name="direccionweb"></label>
+            <input type="date" min="2010-08-14" max="2011-08-14" value="2010-08-14">
+            <br>
+            <input type="range" min="0" max="50" value="10" >
+            <br>
+            <input type="search"  placeholder="Search.." >
+            <br>
+            <input type="tel"  placeholder="(555) 555-5555"
+         pattern="^\(?\d{3}\)?[-\s]\d{3}[-\s]\d{4}.*?$">
+            <br>
+            <input type="color" >
+            <br>
+            <input type="number" step="1" min="-5" max="10" value="0" >
+        </div>
+</html>
