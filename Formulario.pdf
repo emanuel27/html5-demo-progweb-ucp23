@@ -1,0 +1,40 @@
+GIMENEZ HECTOR EMANUEL
+
+DATALIST INPUT HTML5
+
+Este nuevo elemento aglutina varios valores predefinidos que facilitan el autocompletado de un campo tipo input.
+Es decir, según el usuario va escribiendo, el navegador abre una lista desplegable con las diferentes opciones a seleccionar. Es muy parecido a un combo o lista.
+Podéis ver la documentación y ejemplos en el post ‘Datalist en HTML5: Sugiere una lista de valores en un form‘.
+
+NUMBER INPUT HTML5
+Este input valida automáticamente que los valores introducidos sean numéricos, con el consiguiente ahorro de código en la recepción o validación de los formularios.
+El post en el que hay más info es ‘HTML5 number input: Un nuevo campo de tipo numérico en el form‘.
+
+COLOR INPUT HTML5
+Representa una paleta (selector) de colores sin necesidad de añadir plugins ni códigos adicionales como veníamos haciendo hasta ahora. Así con un solo click podemos elegir facílmente un color.
+Los ejemplos los podéis ver en el post ‘HTML5 color input: Paleta de colores hexadecimal para formularios‘.
+
+SEARCH INPUT HTML5
+Con este input podremos decir en la validación del formulario que el campo contendrá valores de búsqueda, así el propio input nos porporciona un dato válido y el teclado del dispositivo móvil mostrará el botón ‘buscar’.
+Más info en esta entrada del blog ‘HTML5 search input: Campo de búsqueda para formularios‘.
+
+URL INPUT HTML5
+Se parece bastante a el input tel de HTML5. Este campo cuando se visualiza en dispositivos móviles facilita en el teclado las teclas ‘.’, ‘/’, y ‘.com’.
+Más info en el post ‘HTML5 url input: Un campo de formulario para urls‘.
+
+DATE INPUT HTML5
+Este elemento vale para representar en nuestra web un datepicker o calendario, el formato de la fecha devuelto es ‘AAAA-MM-DD’.
+Podéis ver toda la documentación y ejemplos en el post original ‘Date input HTML5: Un sencillo datepicker para tu formulario‘.
+
+DATETIME INPUT HTML5
+Input similar al anterior solo que este último además de la fecha envía también la hora. El formato de fecha y hora devuelto es el siguiente: ‘AAAA-MM-DDTHH:MMZ’.
+Podéis ver en funcionamiento y su documentación en el post ‘Datetime input HTML5: Un campo de fecha y hora para formularios‘.
+Este elemento está sin implementar en casi todos los navegadores y solo funciona a medias en Safari.
+DATETIME-LOCAL INPUT HTML5
+Más de lo mismo, elemento idéntico al datetime pero sin enviar la zona horaria. El formato devuelto es: ‘AAAA-MM-DDTHH:MM’.
+Podéis consultar su sintaxis y funcionamiento en el post ‘Input datetime-local HTML5: fecha y hora local sin timezone para formularios‘.
+
+
+RANGE INPUT HTML5
+Este input es muy parecido al HTML5 number input, la diferentecia radica en que en este caso la única manera de especificar el valor es mediante su slider con sus correspondientes límites.
+Podéis verlo en funcionamiento en el post ‘HTML5 range input: rangos de valores con barras de desplazamiento‘.
